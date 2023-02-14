@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  gestionesagre-yarp:
+    container_name: bilanciatore
+    restart: always
+    build:
+      context: .
+      dockerfile: src/GestioneSagre.Balancer/Dockerfile
+    #ports:
+    #  - 8053:5001
+    networks:
+      - lan-network
+
+networks:
+  lan-network:
+    external:
+      name: docker-net
