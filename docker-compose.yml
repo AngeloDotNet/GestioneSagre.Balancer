@@ -7,8 +7,6 @@ services:
     build:
       context: .
       dockerfile: src/GestioneSagre.Balancer/Dockerfile
-    #ports:
-    #  - 8053:5001
     networks:
       - lan-network
 
